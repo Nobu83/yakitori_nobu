@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- jQueryのCDN --> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/footerFixed.js"></script> 
+    <!-- GoogleのCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <!-- MicrosoftのCDN -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!--インナー-->
+        <div class="header__inner">
+            <!--ロゴ画像-->
+            <a href="#">
+                <img class="header__logo" src="img/logo.svg">
+            </a>
+            <!--ナビ欄-->
+            <div id="nav" class="header__navgroup">
+                <!--ナビ-->
+                <div class="header__navitem"><a href="#news">お知らせ</a></div>
+                <div class="header__navitem"><a href="#access">予約・アクセス</a></div>
+                <div class="header__navitem"><a href="#menu">メニュー</a></div>
+                <div class="header__navitem"><a href="#another_shop">姉妹店情報</a></div>
+                <div class="header__navitem header__contact"><a class="a__btn" href="#info">お問合せ</a></div>
+            </div>
+            <!-- モーダル -->
+            <div id="hamburger__modal" class="hamburger__modal"></div>
+            <!--ハンバーガーメニューボタン--><i class="fal fa-bars"></i>
+            
+            <div id="hamburger__btn" class="hamburger__btn"><i class="fas fa-bars"></i></div>
+        </div>
+        <script>
+            var lastInnerWidth = document.documentElement.clientWidth; //window.innerWidthで現在の画面幅を取得
+            var nav=document.getElementById('nav');
+            if (lastInnerWidth<=1000){ // 画面幅1000px以下の場合
+                nav.classList.add('hamburger');// クラス「hamburger」を追加
+            }
+            // 横幅が変わった時 実行される関数
+            window.addEventListener("resize",function(){
+                // 現在と前回の横幅が違う場合だけ実行
+                if (lastInnerWidth != document.documentElement.clientWidth) {
+                    // 横幅を記憶しておく
+                    lastInnerWidth = document.documentElement.clientWidth;
+                    if(lastInnerWidth <= 1000){ //画面幅1000px以下の場合
+                        if(!(nav.classList.contains('hamburger'))){ //クラス「hamburger」がない場合
+                            nav.classList.add('hamburger'); //クラス「hamburger」を追加
+                        }
+                    }else{ //画面幅1001px以上の場合
+                        nav.classList.remove('hamburger'); //クラス「hamburger」を削除
+                    }
+                }
+                });
+                //ハンバーガーメニューボタンをクリックしたときに実行される関数
+                document.getElementById('hamburger__btn').addEventListener('click',function(){
+                    //ナビ一覧とモーダルを表示
+                    nav.style.display="block";
+                    document.getElementById('hamburger__modal').style.display="block";
+                });
+                //ハンバーガーメニューが表示されてるときに、モーダルがクリックされると実行される関数
+                document.getElementById('hamburger__modal').addEventListener('click',function(){
+                    //ナビ一覧とモーダルを非表示
+                    nav.style.display="none";
+                    document.getElementById('hamburger__modal').style.display="none";
+            }
+            );
+        </script>
+    </header>
+	<div class="main">
+<!--------------------------
+トップページのファーストビュー
+---------------------------->
+<div class="topimg">
+	<img class="top_img" src="img/top.jpg" alt="">
+    <img class="top_logo" src="img/top_logo_wh.svg">
+    <img class="top_logo_mobile" src="img/top_logo_mobile_2.svg">
+</div>
+<!--------------------------
+お知らせブロック
+---------------------------->
+<div class="news_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content__items">
+                    <!--コンテンツのインナー-->
+                    <div id="news" class="content__inner">
+                        <!--コンテンツのタイトルエリア-->
+                        <div class="content__header">
+                            <div class="content__header__inner_wh">
+                                <!--お知らせ-->
+                                <img src="img/news.svg" alt="" class="heading_img">
+                            </div>
+                            <!--コンテンツの内容-->
+                            <div class="news__content">
+                                <!-- 1記事 -->
+                                <a href="">
+                                    <div class="news__items">
+                                        <!--記事の投稿日-->
+                                        <div class="news__item news__date">
+                                            2021年01月01日
+                                        </div>
+                                        <!--記事のタイトル-->
+                                        <div class="news__item" style="color: black;">
+                                            ここに記事タイトルが入る。ここに記事タイトルが入る。
+                                        </div>
+                                        <!--デザイン右の矢印-->
+                                        <div class="news__item news__anchor">
+                                            <a href="#"class="news__more">
+                                            →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- 2記事 -->
+                                <a href="">
+                                    <div class="news__items">
+                                        <!--記事の投稿日-->
+                                        <div class="news__item news__date">
+                                            2021年02月01日
+                                        </div>
+                                        <!--記事のタイトル-->
+                                        <div class="news__item" style="color: black;">
+                                            ここに記事タイトルが入る。ここに記事タイトルが入る。
+                                        </div>
+                                        <!--デザイン右の矢印-->
+                                        <div class="news__item news__anchor">
+                                            <a href="#"class="news__more">
+                                            →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- 3記事 -->
+                                <a href="">
+                                    <div class="news__items">
+                                        <!--記事の投稿日-->
+                                        <div class="news__item news__date">
+                                            2021年03月01日
+                                        </div>
+                                        <!--記事のタイトル-->
+                                        <div class="news__item" style="color: black;">
+                                            ここに記事タイトルが入る。ここに記事タイトルが入る。
+                                        </div>
+                                        <!--デザイン右の矢印-->
+                                        <div class="news__item news__anchor">
+                                            <a href="#"class="news__more">
+                                            →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="news__button">
+                                お知らせ一覧はこちら
+                                <a href="" class="a__btn"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------
+ご予約・アクセス ブロック
+---------------------------->
+<div class="container info_access">
+    <div id="access" class="row">
+        <div class="content__header__inner_bk">
+            <!--ご予約・アクセス-->
+            <img src="img/access.svg" alt="" class="heading_img">
+        </div>
+        <!--丸の内店ロゴ-->
+        <div class="col-md-6">
+            <img src="img/marunouchi_logo.svg" alt="" class="marunouchi_logo">
+        </div>
+        <!--丸の内店 電話番号-->              
+        <div class="col-md-6">
+            <a href="tel:03-0000-0000" class="tel_number"><img src="img/tel.svg" alt="" class="marunouchi_tel"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <img src="img/marunouchi_img.jpg" alt="" class="marunouchi_img">
+            <img src="img/marunouchi_img_2.jpg" alt="" class="marunouchi_img_2">       
+        </div>
+    </div>
+    <div class="row access_area">
+        <div class="col-md-6">
+            <div class="access">
+                <h4>
+                    住所
+                </h4>
+                <p>
+                    〒100-0000 東京都千代田区２-７−２ KATTE丸の内 ダミー階
+                </p>
+            </div>
+            <div class="access">
+                <h4>
+                    アクセス
+                </h4>
+                <p>
+                    JR「東京駅」 丸の内口より徒歩2分<br>
+                    東京メトロ「東京駅」 丸の内口より徒歩1分<br>
+                    東京メトロ「二重橋駅」1番出口より徒歩13分
+                </p>
+            </div>
+            <div class="access">
+                <h4>
+                    営業時間
+                </h4>
+                <p>
+                    17:30～23:00（料理L.O.22:00、ドリンクL.O.22:30）<br>
+                    ※定休日：水曜日
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 map">
+            <div class="googlemap-bw">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12963.545806135773!2d139.7648724!3d35.6797978!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9f64e11ee9dc660a!2zS0lUVEXkuLjjga7lhoU!5e0!3m2!1sja!2sjp!4v1636773197555!5m2!1sja!2sjp" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------
+メニュー ブロック
+---------------------------->
+<div class="menu">
+    <div class="container">
+        <div id="menu" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="content__items">
+                    <!--コンテンツのインナー-->
+                    <div class="content__inner">
+                        <!--コンテンツのタイトルエリア-->
+                        <div class="content__header">
+                            <div class="content__header__inner_wh">
+                                <!--メニュー-->
+                                <img src="img/menu.svg" alt="" class="heading_img">
+                            </div>
+                        </div>
+                        <p class="menu_top_text">
+                        手仕込みにこだわる華味鳥や国産鶏の焼き鳥の他、串焼きや自家製茶豆、特製お吸い物など、上質な居酒屋メニューが味わえるのが人気の秘訣。
+                        長年炭と向き合う店主が手掛ける渾身の串や一品料理を、ぜひお好きなお酒とともにお召し上がりください。デートのディナーには、1日10食限定・幻のつくねや3種類から選べる豚バラ串がおすすめです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="menus">
+            <div class="row menu">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu1.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>特性串焼き</h3>
+                        <p>味、肉汁を逃さないよう、串にささず焼き上げる特性焼き鳥は1日限定20串。ふわふわ過ぎず適度な弾力と歯応えは企業秘密。味付けは、著名人たちの間にもファンが多い「ろく助塩」でお召し上がりください。</p>
+                </div>
+            </div>
+            <div class="row menu">
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>鳥寿司</h3>
+                        <p>当日入荷した鶏肉のみ使用する鳥寿司。新鮮な鳥肉だからこそ出来る逸品です。お客様の食卓にて表面を炙ってお出しさせていただきます。口の中に入れると、フワッっと鶏肉の旨味が広がります。新鮮な鶏肉しか使えませんので、毎日数量限定でご提供させていただきます。※入荷状況などはお問合せください。</p>
+                </div>
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu2.jpg" alt="" class="menu_ph">   
+                </div>
+            </div>
+            <div class="row menu">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu3.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>特製唐揚げ</h3>
+                        <p>国産若鶏を100％使用し、秘伝特製タレが自慢。中でも希少部位の肩肉を使用した唐揚げが当店の人気商品となっています。外はカリっと、中はジューシーに鶏肉本来の旨味を引き出すために、こだわりの油で一つ一つを丁寧に揚げております。素材、タレ、油、調理方法にこだわり抜いた逸品をご賞味くださいませ。</p>
+                </div>
+            </div>
+            <div class="row menu menu_bottom">
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>鳥丼</h3>
+                        <p>お食事の〆に「鳥丼」をお召し上がりください。鳥の胸肉を使った鳥丼は熟成タレが染み込んでおり、口の中に入れると熟成タレがお口の中に染み渡る逸品でございます。お食事の〆にふさわしい量でご提供しております。</p>
+                </div>
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu4.jpg" alt="" class="menu_ph">   
+                </div>
+            </div>
+        </div>
+        <div class="menus_mobile">
+            <div class="row menu">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu1.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>特性串焼き</h3>
+                        <p>味、肉汁を逃さないよう、串にささず焼き上げる特性焼き鳥は1日限定20串。ふわふわ過ぎず適度な弾力と歯応えは企業秘密。味付けは、著名人たちの間にもファンが多い「ろく助塩」でお召し上がりください。</p>
+                </div>
+            </div>
+            <div class="row menu">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu2.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>鳥寿司</h3>
+                        <p>当日入荷した鶏肉のみ使用する鳥寿司。新鮮な鳥肉だからこそ出来る逸品です。お客様の食卓にて表面を炙ってお出しさせていただきます。口の中に入れると、フワッっと鶏肉の旨味が広がります。新鮮な鶏肉しか使えませんので、毎日数量限定でご提供させていただきます。※入荷状況などはお問合せください。</p>
+                </div>
+            </div>
+            <div class="row menu">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu3.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>特製唐揚げ</h3>
+                        <p>国産若鶏を100％使用し、秘伝特製タレが自慢。中でも希少部位の肩肉を使用した唐揚げが当店の人気商品となっています。外はカリっと、中はジューシーに鶏肉本来の旨味を引き出すために、こだわりの油で一つ一つを丁寧に揚げております。素材、タレ、油、調理方法にこだわり抜いた逸品をご賞味くださいませ。</p>
+                </div>
+            </div>
+            <div class="row menu menu_bottom">
+                <div class="col-md-6" style="padding:0;">
+                    <img src="img/menu4.jpg" alt="" class="menu_ph">   
+                </div>
+                <div class="col-md-6 menu_tx" style="padding:0;">
+                        <h3>鳥丼</h3>
+                        <p>お食事の〆に「鳥丼」をお召し上がりください。鳥の胸肉を使った鳥丼は熟成タレが染み込んでおり、口の中に入れると熟成タレがお口の中に染み渡る逸品でございます。お食事の〆にふさわしい量でご提供しております。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--------------------------
+姉妹店情報 ブロック
+---------------------------->
+<div class="container">
+    <div id="another_shop" class="row another">
+        <div class="content__header__inner_bk">
+            <!--姉妹店情報-->
+            <img src="img/another_shop.svg" alt="" class="heading_img">
+        </div>
+            <div class="col-sm another_shop_left">
+                <img src="img/minami-aoyama.jpg" alt="" class="another_shop_img">
+                <img src="img/mnami-aoyama_logo.svg" alt="" class="another_shop_logo"> 
+                <div class="another_shop_text"> 
+                    <h5>住所</h5>
+                    <p>〒100-0000 東京都港区1-1-1</p>
+                    <h5>電話番号</h5>
+                    <a href="tel:03-0000-0000">03-0000-0000</a>
+                    <a href="#">
+                        <h5>Webサイト</h5>
+                        <p>https//ooooo.com</p>
+                    </a>
+                </div>    
+            </div>
+            <div class="col-sm another_shop_center">
+                <img src="img/kagurazaka.jpg" alt="" class="another_shop_img">
+                <img src="img/kagurazaka.svg" alt="" class="another_shop_logo">      
+                <div class="another_shop_text"> 
+                    <h5>住所</h5>
+                    <p>〒100-0000 東京都千代田区1-1-1 </p>
+                    <h5>電話番号</h5>
+                    <a href="tel:03-0000-0000">03-0000-0000</a>
+                    <a href="#">
+                        <h5>Webサイト</h5>
+                        <p>https//ooooo.com</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm another_shop_right">
+                <img src="img/akasaka.jpg" alt="" class="another_shop_img">
+                <img src="img/akasaka_logo.svg" alt="" class="another_shop_logo">  
+                <div class="another_shop_text">     
+                    <h5>住所</h5>
+                    <p>〒100-0000 東京都港区1-1-1</p>
+                    <h5>電話番号</h5>
+                    <a href="tel:03-0000-0000">03-0000-0000</a>
+                    <a href="#">
+                        <h5>Webサイト</h5>
+                        <p>https//ooooo.com</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------
+お問合せ ブロック
+---------------------------->
+<div class="info">
+    <div class="container">
+        <div id="info" class="row">
+            <div class="content__header__inner_wh">
+                <!--お問合せ名-->
+                <img src="img/inform.svg" alt="" class="heading_img">
+            </div>
+            <div class="col-md-12">
+            <!-- コンタクトフォーム -->
+                <div class="wp-block-contact-form-7-contact-form-selector"><div role="form" class="wpcf7" id="wpcf7-f16-p17-o1" lang="ja" dir="ltr">
+                <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                <form action="/yakitori_nobu/contact/#wpcf7-f16-p17-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="16" />
+                    <input type="hidden" name="_wpcf7_version" value="5.5.2" />
+                    <input type="hidden" name="_wpcf7_locale" value="ja" />
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f16-p17-o1" />
+                    <input type="hidden" name="_wpcf7_container_post" value="17" />
+                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                </div>
+                <div class="ContactForm7__contact">
+                        <div class="ContactForm7__contact__label">
+                            お名前<span>必須</span>
+                        </div>
+                    <p>    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></p>
+                        <div class="ContactForm7__contact__label">
+                            電話番号<span>必須</span>
+                        </div>
+                    <p>    <span class="wpcf7-form-control-wrap tel-915"><input type="tel" name="tel-915" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" aria-invalid="false" /></span></p>
+                        <div class="ContactForm7__contact__label">
+                            メールアドレス<span>必須</span>
+                        </div>
+                    <p>    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></p>
+                        <div class="ContactForm7__contact__label">
+                            お問い合わせ内容<span>必須</span>
+                        </div>
+                    <p>    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span></p>
+                    <div class="ContactForm7__contact__submit"><input type="submit" value="送信" class="wpcf7-form-control has-spinner wpcf7-submit" /></div>
+                </div>
+                <div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div>     
+            <!-- コンタクトフォーム -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <footer class="footer"> -->
+    <div class="footer_imgs">
+        <img class="footer_img" src="img/footer.jpg" alt="">
+        <img class="footer_logo" src="img/footer_logo.svg">
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>
