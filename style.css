@@ -74,7 +74,6 @@ header {
 	width: 100%;
 	height: 100px;
 	border-bottom: solid 1px #ddd;
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
     background-repeat: repeat-x;    
 	z-index: 9999;
@@ -117,9 +116,8 @@ header {
 
 	header {
 		width: 100%;
-		height: 80px;
+		height: 100px;
 		border-bottom: solid 1px #ddd;
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 		background-image: url(img/back_img.png);
 		background-repeat: repeat-x;    
 		z-index: 9999;
@@ -278,7 +276,6 @@ footer {
 		
 		.top_img{
 			position: relative;/*相対配置*/
-			margin-top: -10px;
 			width: 100%;
 			height: 400px;
 			z-index: 8000;
@@ -291,7 +288,7 @@ footer {
 			color: white;/*文字は白に*/
 			width: 100%;
 			height: 80%;
-			z-index: 9999;
+			z-index: 8888;
 			margin-top: 30px;
 		}
 	
@@ -400,7 +397,6 @@ footer {
 *****************************************/
 
 .news_area{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	margin-top: -10px;
 }
@@ -732,7 +728,6 @@ footer {
 *****************************************/
 
 .menu{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	margin-top: -10px;
 }
@@ -827,8 +822,7 @@ footer {
 	}
 
 	.menu{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		margin-top: 30px;
 	}
 
@@ -871,7 +865,6 @@ footer {
 }
 
 .another_shop_left{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	padding-right: 0;
 	padding-left: 0;
@@ -882,7 +875,6 @@ footer {
 }
 
 .another_shop_center{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	padding-right: 0;
 	padding-left: 0;
@@ -893,7 +885,6 @@ footer {
 }
 
 .another_shop_right{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	padding-right: 0;
 	padding-left: 0;
@@ -997,8 +988,7 @@ footer {
 	}
 
 	.another_shop_left{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0;
 		padding-left: 0;
 		margin-right: 10px;
@@ -1008,8 +998,7 @@ footer {
 	}
 	
 	.another_shop_center{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0;
 		padding-left: 0;
 		margin-right: 10px;
@@ -1019,8 +1008,7 @@ footer {
 	}
 	
 	.another_shop_right{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0;
 		padding-left: 0;
 		margin-right: 10px;
@@ -1035,8 +1023,7 @@ footer {
 
 @media screen and (max-width: 600px) {
 	.another_shop_left{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0px;
 		padding-left: 0px;
 		margin-right: 0px;
@@ -1046,8 +1033,7 @@ footer {
 	}
 	
 	.another_shop_center{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0px;
 		padding-left: 0px;
 		margin-right: 0px;
@@ -1057,8 +1043,7 @@ footer {
 	}
 	
 	.another_shop_right{
-		/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
-		background-image: url(img/back_img.png);
+			background-image: url(img/back_img.png);
 		padding-right: 0px;
 		padding-left: 0px;
 		margin-right: 0px;
@@ -1075,7 +1060,6 @@ footer {
 *****************************************/
 
 .info{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 	margin-top: -10px;
 	padding-top: 50px;
@@ -1178,7 +1162,6 @@ footer {
 	height: 350px;
 	}
 .single_body{
-	/* background-image: url(http://localhost:8888/yakitori_nobu/wp-content/uploads/2021/11/back_img.png); */
 	background-image: url(img/back_img.png);
 }
 
